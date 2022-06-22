@@ -15,6 +15,30 @@ const routes = [
         name: 'Home',
         component: () => import('@/views/home'),
       },
+      // 艺人服务
+      {
+        path: 'service',
+        name: 'artistService',
+        component: () => import('@/views/artistService'),
+      },
+      // 音乐发行
+      {
+        path: 'publish',
+        name: 'muiscPublish',
+        component: () => import('@/views/muiscPublish'),
+      },
+      // 音乐专区
+      {
+        path: 'prefecture',
+        name: 'muiscPrefecture',
+        component: () => import('@/views/muiscPrefecture'),
+      },
+      // 关于我们
+      {
+        path: 'about',
+        name: 'aboutUs',
+        component: () => import('@/views/aboutUs'),
+      },
     ],
   },
 ]
