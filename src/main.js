@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import 'swiper/css'
 
 // 自定义公共组件
 import CommonComponents from '@/components/com'
