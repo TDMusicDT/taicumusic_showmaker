@@ -1,14 +1,19 @@
 <template>
-  <section>音乐专区</section>
+  <section>
+    <com-music :data="musicObject" />
+  </section>
 </template>
 <script>
+import PARAMS from '@/parmas'
 export default {
   name: 'muiscPrefecture',
   components: {},
   filters: {},
   props: {},
   data() {
-    return {}
+    return {
+      musicObject: PARAMS.new_music,
+    }
   },
   computed: {},
   watch: {},

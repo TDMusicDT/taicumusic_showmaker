@@ -1,100 +1,57 @@
 <template>
   <div class="com-music">
-    <div class="com-music__title"></div>
-    <div class="com-music__items"></div>
+    <div class="com-music__title">
+      <h2>
+        <i>{{ data.title }}</i>
+      </h2>
+    </div>
+    <div class="com-music__items">
+      <template v-for="(item, index) in data.items">
+        <div class="com-music__items_item" :key="index">
+          <div class="item-img">
+            <img :src="item.imgSource" :alt="item.label" />
+          </div>
+          <div class="item-title">
+            <span>{{ item.label }}</span>
+          </div>
+          <div class="item-authors">{{ item.authors | authorFilter }}</div>
+        </div>
+      </template>
+      <div class="com-music__items_item btn-more">
+        <div class="item-img">
+          <a :href="data.buttonHref">
+            <img
+              src="../../../assets/images/com/com_music_play.png"
+              alt="Music Play"
+            />
+          </a>
+        </div>
+        <div class="item-title">
+          <a :href="data.buttonHref">{{ data.buttonName }}</a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 export default {
   name: 'ComMusic',
   components: {},
-  filters: {},
-  props: {},
+  filters: {
+    authorFilter(names) {
+      let nameResult = ''
+      for (const name of names) {
+        if (name?.name && nameResult) nameResult += ' / '
+        nameResult += name.name
+      }
+      return nameResult
+    },
+  },
+  props: {
+    data: { type: Object, default: () => {} },
+  },
   data() {
-    return {
-      musicObject: {
-        title: '最新单曲',
-        buttonName: '点击试听更多',
-        items: [
-          {
-            imgSource:
-              'https://user-assets.sxlcdn.com/images/402037/FjEvX7sdh5odpQ0soLlQPRU-anNo.jpeg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/interlace/1/format/jpeg',
-            label: '浩瀚星海',
-            imgHref: 'https://y.qq.com/n/ryqq/songDetail/002yvUvH4RVyT7',
-            authors: [
-              {
-                name: '丁芙妮',
-                href: null,
-              },
-            ],
-          },
-          {
-            imgSource:
-              'https://user-assets.sxlcdn.com/images/869682/FlHsBvE_FTo8aknfrNtlVLQzrPgY.jpg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/quality/90!/interlace/1/format/jpeg',
-            label: '自娱自乐',
-            imgHref: 'https://y.qq.com/n/ryqq/songDetail/002yvUvH4RVyT7',
-            authors: [
-              {
-                name: '金志文',
-                href: null,
-              },
-            ],
-          },
-          {
-            imgSource:
-              'https://user-assets.sxlcdn.com/images/402037/FkeNbQOKL9vQ_0RBPTxH70-qXpqR.jpeg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/interlace/1/format/jpeg',
-            label: '不如',
-            imgHref: 'https://y.qq.com/n/ryqq/songDetail/002yvUvH4RVyT7',
-            authors: [
-              {
-                name: '秦海清',
-                href: null,
-              },
-            ],
-          },
-          {
-            imgSource:
-              'https://user-assets.sxlcdn.com/images/402037/Ftc9dJhx5xiRA6zdcV66jn26q-Af.jpeg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/interlace/1/format/jpeg',
-            label: '落日与晚风',
-            imgHref: 'https://y.qq.com/n/ryqq/songDetail/002yvUvH4RVyT7',
-            authors: [
-              {
-                name: 'IN-K',
-                href: 'https://y.qq.com/n/ryqq/singer/002yupVT2XEFaA',
-              },
-              {
-                name: '王忻辰',
-                href: 'https://y.qq.com/n/ryqq/singer/004W8PqQ0EYrEr',
-              },
-              {
-                name: '苏星婕',
-                href: 'https://y.qq.com/n/ryqq/singer/002lKaDq2lLLtk',
-              },
-            ],
-          },
-          {
-            imgSource:
-              'https://user-assets.sxlcdn.com/images/869682/FkpUtouQkZ5IojeKnbo1dvoEG8EV.jpg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/quality/90!/interlace/1/format/jpeg',
-            label: '放空',
-            imgHref: 'https://y.qq.com/n/ryqq/songDetail/002yvUvH4RVyT7',
-            authors: [
-              {
-                name: 'A1 TRIP',
-                href: 'https://y.qq.com/n/ryqq/singer/002yupVT2XEFaA',
-              },
-              {
-                name: '大籽',
-                href: 'https://y.qq.com/n/ryqq/singer/004W8PqQ0EYrEr',
-              },
-              {
-                name: 'Lil E',
-                href: 'https://y.qq.com/n/ryqq/singer/002lKaDq2lLLtk',
-              },
-            ],
-          },
-        ],
-      },
-    }
+    return {}
   },
   computed: {},
   watch: {},
@@ -104,25 +61,76 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+@import '@/assets/global.less';
 .com-music {
-  padding: 0 80px;
+  padding: 80px 0;
   padding-bottom: 55px;
+  width: 1088px;
+  margin: 0 auto;
+  // 标题
   &__title {
+    text-align: left;
+    font-size: 36px;
+    margin: 0 12px;
+    color: @color-font;
+    margin-bottom: 30px;
   }
+  // item 列表
   &__items {
-    &::after {
-      content: ' ';
-      display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: 60px auto 0;
-      background: url(/images/line-shadow.320a0ef….png) no-repeat 50%;
-      height: 10px;
-      background-size: contain;
-      width: 1040px;
-      max-width: 94%;
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    &_item {
+      width: 157px;
+      height: 237px;
+      margin: 0 12px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      align-content: center;
+      .item {
+        //item 图片
+        &-img {
+          img {
+            width: 157px;
+            height: 157px;
+          }
+        }
+        // item 标题
+        &-title {
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+      // 更多按钮
+      &.btn-more {
+        justify-content: flex-start;
+        // item 标题
+        .item-title {
+          font-size: 14px;
+          font-weight: bold;
+          a:hover {
+            color: #ff8529;
+          }
+        }
+      }
     }
+  }
+  &::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 60px auto 0;
+    background-image: url('../../../assets/images/com/com_music_bottom_line.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: 10px;
+    background-size: contain;
+    width: 1040px;
+    max-width: 94%;
   }
 }
 </style>

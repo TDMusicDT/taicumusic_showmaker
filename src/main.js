@@ -5,7 +5,7 @@ import store from './store'
 import 'swiper/css'
 
 // 自定义公共组件
-import CommonComponents from '@/components/com'
+import CommonComponents from '@/components/common'
 // 加载自定义公共组件
 Vue.use(CommonComponents)
 
