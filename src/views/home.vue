@@ -45,24 +45,10 @@
         <com-music :data="albumObject" />
       </section>
     </div>
-    <!-- <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-      </div>
-      <div class="swiper-pagination"></div>
-
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <div class="swiper-scrollbar"></div>
-    </div> -->
   </div>
 </template>
 
 <script>
-import Swiper from 'swiper'
 export default {
   name: 'HomePage',
   data() {
@@ -177,40 +163,14 @@ export default {
             desc: '秋原依',
             imgSource: 'album_03.jpeg',
           },
-          { label: '知道吗', desc: '孟颖', imgSource: 'album_04.jpeg' },
+          { label: '知道吗', desc: '孟颖', imgSource: 'album_04.png' },
           { label: '城南城北', desc: '苏蕾', imgSource: 'album_05.jpeg' },
         ],
       },
     }
   },
-  mounted() {
-    // this.swiperInit()
-  },
-  methods: {
-    swiperInit() {
-      new Swiper('.swiper', {
-        // Optional parameters
-        // direction: 'vertical',
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
-      })
-    },
-  },
+  mounted() {},
+  methods: {},
 }
 </script>
 

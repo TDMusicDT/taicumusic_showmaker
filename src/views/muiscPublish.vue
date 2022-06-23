@@ -114,6 +114,7 @@ export default {
       caseList: {
         title: '宣发案例',
         case: true,
+        showLine: false,
         items: [
           {
             imgSource: 'muiscPublish/jpeg (2).jpg',
