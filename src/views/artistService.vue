@@ -9,7 +9,7 @@
             <div class="text-xl mt-4 mb-2">
               <strong>{{ item.title }}</strong>
             </div>
-            <div class="text-sm">
+            <div class="text-sm desc">
               {{ item.desc }}
             </div>
           </div>
@@ -28,7 +28,7 @@
             <div class="text-xl mt-4 mb-2">
               <strong>{{ item.title }}</strong>
             </div>
-            <div class="text-sm">
+            <div class="text-sm desc">
               {{ item.desc }}
             </div>
           </div>
@@ -173,6 +173,10 @@ export default {
     margin-bottom: 40px;
     text-align: center;
     overflow: hidden;
+    .desc {
+      text-align: left;
+      color: #50555c;
+    }
   }
 }
 </style>

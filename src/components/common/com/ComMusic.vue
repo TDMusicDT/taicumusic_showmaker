@@ -5,7 +5,7 @@
         <i>{{ data.title }}</i>
       </h2>
     </div>
-    <div class="com-music__items">
+    <div class="com-music__items" :class="{ case: data.case }">
       <template v-for="(item, index) in data.items">
         <div class="com-music__items_item" :key="index">
           <div class="item-img">
@@ -122,11 +122,15 @@ export default {
           //   font-style: italic;
           margin-top: 10px;
           //   margin-bottom: 10px;
-          color: #524f4c;
+          color: @color-font;
         }
         &-authors {
           font-size: 13px;
           font-weight: 500;
+          margin-top: 6px;
+        }
+        &-desc {
+          font-size: 16px;
           margin-top: 6px;
         }
       }
@@ -140,6 +144,30 @@ export default {
           a:hover {
             color: #ff8529;
           }
+        }
+      }
+    }
+    &.case {
+      justify-content: center;
+    }
+    &.case > &_item {
+      width: 248px;
+      .item {
+        //item 图片
+        &-img {
+          img {
+            width: 248px;
+            height: 248px;
+          }
+        }
+        // item 标题
+        &-title {
+          font-size: 24px;
+          font-weight: normal;
+        }
+        &-authors {
+          font-size: 20px;
+          font-weight: 600;
         }
       }
     }
