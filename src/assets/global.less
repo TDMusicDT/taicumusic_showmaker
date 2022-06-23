@@ -1,7 +1,8 @@
 @import './variable.less';
 
 body {
-  font-family: 'lato', 'PingFang SC', 'Microsoft YaHei', '微软雅黑', 'STXihei', '华文细黑', 'sans-serif';
+  font-family: 'lato', 'PingFang SC', 'Microsoft YaHei', '微软雅黑', 'STXihei',
+    '华文细黑', 'sans-serif';
 }
 
 .section-container {
@@ -10,4 +11,34 @@ body {
   padding: 0;
   margin: 0 auto;
   text-align: left;
+
+  .section {
+    position: relative;
+    padding-bottom: 40px;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    //   margin: 60px auto 0;
+      background-image: url('https://taicumusic.ks3-cn-beijing.ksyuncs.com/imgs/com_music_bottom_line.png');
+      background-repeat: no-repeat;
+      background-size: 50%;
+      height: 10px;
+      background-size: contain;
+      width: 1040px;
+      max-width: 94%;
+    }
+  }
+
+  .section-title {
+    font-size: 36px;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #524f4c;
+  }
 }

@@ -3,7 +3,7 @@
     <div class="header-container">
       <div class="logo-container">
         <img
-          src="https://digiads-icon.ks3-cn-guangzhou.ksyuncs.com/default/digiads_logo.png"
+          src="https://taicumusic.ks3-cn-beijing.ksyuncs.com/imgs/taicudt_logo.jpeg"
           class="logo-img"
           data-description=""
         />
@@ -95,7 +95,7 @@ export default {
     padding-left: 20px;
 
     .menu-dropdown {
-      margin-left: 20px;
+      margin-left: 40px;
       a {
         color: #666;
       }
