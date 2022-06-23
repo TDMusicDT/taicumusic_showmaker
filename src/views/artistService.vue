@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="section-1">
+      <com-swiper :img-list="bannerList" />
+    </div>
     <div class="section-container">
       <section class="section">
         <h2 class="section-title">签约艺人可享受</h2>
@@ -33,7 +36,6 @@
             </div>
           </div>
         </div>
-        <com-music :data="artistObject" />
       </section>
     </div>
   </div>
@@ -46,6 +48,14 @@ export default {
   props: {},
   data() {
     return {
+      bannerList: [
+        'artist_bg_01.jpeg',
+        'artist_bg_02.jpeg',
+        'artist_bg_03.jpeg',
+        'artist_bg_04.jpeg',
+        'artist_bg_05.jpeg',
+        'artist_bg_06.jpeg',
+      ],
       enjoyList: [
         {
           title: '音乐制作',
@@ -172,7 +182,14 @@ export default {
     margin-right: 12px;
     margin-bottom: 40px;
     text-align: center;
-    overflow: hidden;
+    img {
+      border-radius: 4px;
+      //   cursor: pointer;
+      transition: all 0.4s ease-in;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 </style>

@@ -12,31 +12,15 @@
         </div>
       </div>
       <ul class="nav-container">
-        <li class="menu-dropdown">
-          <a class="s-nav-item" target="_self" href="/"
-            ><span class="s-font-body">首页</span></a
-          >
+        <li
+          class="menu-dropdown"
+          :class="{ active: currentPath === nav.path }"
+          v-for="nav in navs"
+          :key="nav.label"
+          @click="handleNavChange(nav)"
+        >
+          <span class="s-font-body">{{ nav.label }}</span>
         </li>
-        <li class="menu-dropdown">
-          <a class="s-nav-item" target="_self" href="/service"
-            ><span class="s-font-body">艺人服务</span></a
-          >
-        </li>
-        <li class="menu-dropdown">
-          <a class="s-nav-item" target="_self" href="/publish"
-            ><span class="s-font-body">音乐发行</span></a
-          >
-        </li>
-        <li class="menu-dropdown">
-          <a class="s-nav-item selected" target="_self" href="/prefecture"
-            ><span class="s-font-body">音乐专区</span></a
-          >
-        </li>
-        <!-- <li class="menu-dropdown">
-          <a class="s-nav-item" target="_self" href="/6"
-            ><span class="s-font-body">关于我们</span></a
-          >
-        </li> -->
       </ul>
     </div>
   </div>
@@ -46,7 +30,25 @@
 export default {
   name: 'AppHeader',
   data() {
-    return {}
+    return {
+      currentPath: '/home',
+      navs: [
+        { label: '首页', path: '/home' },
+        { label: '艺人服务', path: '/service' },
+        { label: '音乐发行', path: '/publish' },
+        { label: '音乐专区', path: '/prefecture' },
+      ],
+    }
+  },
+  created() {
+    this.currentPath = this.$route.path
+    console.log(this.currentPath)
+  },
+  methods: {
+    handleNavChange(nav) {
+      this.currentPath = nav.path
+      this.$router.push({ path: nav.path })
+    },
   },
 }
 </script>
@@ -96,8 +98,10 @@ export default {
 
     .menu-dropdown {
       margin-left: 40px;
-      a {
-        color: #666;
+      color: #666;
+      cursor: pointer;
+      &.active {
+        color: #9d9dd5;
       }
     }
   }

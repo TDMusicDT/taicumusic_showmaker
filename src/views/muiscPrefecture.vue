@@ -34,9 +34,7 @@ export default {
   computed: {},
   watch: {},
   created() {},
-  mounted() {
-    this.swiperInit()
-  },
+  mounted() {},
   methods: {},
 }
 </script>

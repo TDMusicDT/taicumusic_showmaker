@@ -24,12 +24,14 @@
       </template>
       <div class="com-music__items_item btn-more" v-if="data.showMore">
         <div class="item-img">
-          <a :href="data.buttonHref">
+          <a :href="data.buttonHref || defaultLink">
             <img :src="`${cloudImageUrl}com_music_play.png`" alt="Music Play" />
           </a>
         </div>
         <div class="item-title">
-          <a :href="data.buttonHref">{{ data.buttonName }}</a>
+          <a :href="data.buttonHref || defaultLink">{{
+            data.buttonName || defaultLinkText
+          }}</a>
         </div>
       </div>
     </div>
@@ -59,7 +61,10 @@ export default {
     data: { type: Object, default: () => {} },
   },
   data() {
-    return {}
+    return {
+      defaultLink: '/service',
+      defaultLinkText: '点击了解更多...',
+    }
   },
   computed: {},
   watch: {},
@@ -108,7 +113,7 @@ export default {
             border-radius: 4px;
             margin-bottom: 10px;
             border-radius: 4px;
-            cursor: pointer;
+            // cursor: pointer;
             transition: all 0.4s ease-in;
             &:hover {
               transform: scale(1.1);
@@ -135,7 +140,7 @@ export default {
         justify-content: flex-start;
         // item 标题
         .item-title {
-          font-size: 14px;
+          font-size: 16px;
           font-weight: bold;
           a:hover {
             color: #ff8529;

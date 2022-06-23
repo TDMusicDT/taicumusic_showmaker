@@ -61,10 +61,23 @@ export default {
   },
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
 .swiper {
+  width: 100vw;
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff;
+  }
+  .swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .swiper-pagination-bullet-active {
+    background: #fff !important;
+    border-color: #fff !important;
+  }
   img {
-    width: 100%;
+    width: 100vw;
   }
 }
 </style>
