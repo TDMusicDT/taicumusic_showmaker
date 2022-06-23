@@ -1,5 +1,5 @@
 <template>
-  <div class="com-music">
+  <div class="com-music" :class="{ line: data.showLine !== false }">
     <div class="com-music__title">
       <h2>
         <i>{{ data.title }}</i>
@@ -9,15 +9,20 @@
       <template v-for="(item, index) in data.items">
         <div class="com-music__items_item" :key="index">
           <div class="item-img">
-            <img :src="item.imgSource" :alt="item.label" />
+            <img :src="cloudImageUrl + item.imgSource" :alt="item.label" />
           </div>
-          <div class="item-title">
+          <div class="item-title" v-if="item.label">
             <span>{{ item.label }}</span>
           </div>
-          <div class="item-authors">{{ item.authors | authorFilter }}</div>
+          <div class="item-authors" v-if="item.authors">
+            {{ item.authors | authorFilter }}
+          </div>
+          <div class="item-desc" v-if="item.desc">
+            <span>{{ item.desc }}</span>
+          </div>
         </div>
       </template>
-      <div class="com-music__items_item btn-more">
+      <div class="com-music__items_item btn-more" v-if="data.showMore">
         <div class="item-img">
           <a :href="data.buttonHref">
             <img :src="`${cloudImageUrl}com_music_play.png`" alt="Music Play" />
@@ -38,8 +43,14 @@ export default {
     authorFilter(names) {
       let nameResult = ''
       for (const name of names) {
-        if (name?.name && nameResult) nameResult += ' / '
-        nameResult += name.name
+        if (name.name) {
+          if (name?.name && nameResult) nameResult += ' / '
+          nameResult += name.name
+        } else {
+          nameResult = nameResult
+            ? nameResult + ' / ' + name
+            : nameResult + name
+        }
       }
       return nameResult
     },
@@ -80,24 +91,42 @@ export default {
     justify-content: flex-start;
     &_item {
       width: 157px;
-      height: 237px;
+      //   height: 237px;
       margin: 0 12px;
       display: flex;
       flex-flow: column;
       justify-content: space-between;
       align-content: center;
+      text-align: center;
+      margin-bottom: 30px;
       .item {
         //item 图片
         &-img {
           img {
             width: 157px;
             height: 157px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.4s ease-in;
+            &:hover {
+              transform: scale(1.1);
+            }
           }
         }
         // item 标题
         &-title {
-          font-size: 24px;
-          font-weight: bold;
+          font-size: 20px;
+          font-weight: 600;
+          //   font-style: italic;
+          margin-top: 10px;
+          //   margin-bottom: 10px;
+          color: #524f4c;
+        }
+        &-authors {
+          font-weight: 500;
+          margin-top: 6px;
         }
       }
       // 更多按钮
@@ -114,7 +143,7 @@ export default {
       }
     }
   }
-  &::after {
+  &.line::after {
     content: ' ';
     display: block;
     position: absolute;

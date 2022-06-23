@@ -7,7 +7,7 @@
       </div>
     </section>
     <div class="section-container">
-      <section class="section-2">
+      <section class="section section-2">
         <h2 class="section-title">我们能做什么</h2>
         <p class="mt-3 mb-6">
           <em>
@@ -29,31 +29,20 @@
       <!-- <section class="section-3">
           <h2 class="section-title">Hikoon Music词曲库</h2>
       </section> -->
-      <section class="section-4">
-        <h2 class="section-title">合作艺人</h2>
-        <div>合作艺人</div>
-      </section>
-
-      <section class="section-5">
-        <h2 class="section-title">歌曲案例</h2>
+      <section>
+        <com-music :data="artistObject" />
+        <!-- <h2 class="section-title">合作艺人</h2>
         <div>
-          <div class="song-list">
-            <div class="song-item" v-for="item in songList" :key="item.title">
-              <img :src="cloudImageUrl + item.cover" alt="" />
-              <div class="text-xl mt-4 mb-2">
-                <strong>{{ item.title }}</strong>
-              </div>
-              <div>
-                <strong>{{ item.author }}</strong>
-              </div>
-            </div>
-          </div>
-        </div>
+          <com-music :data="artistList" />
+        </div> -->
       </section>
 
-      <section class="section-5">
-        <h2 class="section-title">最近专辑</h2>
-        <div>最近专辑</div>
+      <section>
+        <com-music :data="songObject" />
+      </section>
+
+      <section>
+        <com-music :data="albumObject" />
       </section>
     </div>
     <!-- <div class="swiper">
@@ -101,24 +90,97 @@ export default {
         },
       ],
 
-      songList: [
-        { title: '孤城', author: '洛先生', cover: 'song_gucheng.jpeg' },
-        { title: '我想要', author: '盖君炎', cover: 'song_wxy.jpeg' },
-        { title: '沦陷', author: '王靖雯不胖', cover: 'song_lunxian.jpeg' },
-        {
-          title: '放空',
-          author: 'A1 TRIP/大籽/Lil E',
-          cover: 'song_fangkong.jpeg',
-        },
-        { title: 'TA', author: '不是花火呀', cover: 'song_ta.jpeg' },
-        { title: '迷失幻境', author: 'IN-K / 王忻辰', cover: 'song_mshj.jpeg' },
-        { title: '白月光与朱砂痣', author: '大籽', cover: 'song_bygyzsz.jpeg' },
-        { title: '执迷不悟', author: '小乐哥', cover: 'song_zmbw.jpeg' },
-        { title: '云与海', author: '阿YueYue', cover: 'song_yyh.jpeg' },
-        { title: '忘川彼岸', author: '零一九零贰', cover: 'song_wcpa.jpeg' },
-        { title: '不知所措', author: '王靖雯不胖', cover: 'song_bzsc.jpeg' },
-        { title: '下山', author: '要不要买菜', cover: 'song_xiashan.jpeg' },
-      ],
+      songObject: {
+        title: '歌曲案例',
+        showMore: false,
+        items: [
+          {
+            label: '孤城',
+            authors: ['洛先生'],
+            imgSource: 'song_gucheng.jpeg',
+          },
+          { label: '我想要', authors: ['盖君炎'], imgSource: 'song_wxy.jpeg' },
+          {
+            label: '沦陷',
+            authors: ['王靖雯不胖'],
+            imgSource: 'song_lunxian.jpeg',
+          },
+          {
+            label: '放空',
+            authors: ['A1 TRIP', '大籽', 'Lil E'],
+            imgSource: 'song_fangkong.jpeg',
+          },
+          { label: 'TA', authors: ['不是花火呀'], imgSource: 'song_ta.jpeg' },
+          {
+            label: '迷失幻境',
+            authors: ['IN-K', '王忻辰'],
+            imgSource: 'song_mshj.jpeg',
+          },
+          {
+            label: '白月光与朱砂痣',
+            authors: ['大籽'],
+            imgSource: 'song_bygyzsz.jpeg',
+          },
+          {
+            label: '执迷不悟',
+            authors: ['小乐哥'],
+            imgSource: 'song_zmbw.jpeg',
+          },
+          {
+            label: '云与海',
+            authors: ['阿YueYue'],
+            imgSource: 'song_yyh.jpeg',
+          },
+          {
+            label: '忘川彼岸',
+            authors: ['零一九零贰'],
+            imgSource: 'song_wcpa.jpeg',
+          },
+          {
+            label: '不知所措',
+            authors: ['王靖雯不胖'],
+            imgSource: 'song_bzsc.jpeg',
+          },
+          {
+            label: '下山',
+            authors: ['要不要买菜'],
+            imgSource: 'song_xiashan.jpeg',
+          },
+        ],
+      },
+
+      artistObject: {
+        title: '合作艺人',
+        showMore: true,
+        items: [
+          { imgSource: 'artist_01.jpeg', desc: '胡66' },
+          { imgSource: 'artist_03.jpeg', desc: '大籽' },
+          { imgSource: 'artist_05.jpeg', desc: '零一九零贰' },
+          { imgSource: 'artist_02.jpeg', desc: '王靖雯' },
+          { imgSource: 'artist_06.jpeg', desc: 'Uu刘梦妤' },
+        ],
+      },
+
+      albumObject: {
+        title: '最近专辑',
+        showMore: true,
+        showLine: false,
+        items: [
+          { label: '承让', desc: '曲肖冰', imgSource: 'album_01.png' },
+          {
+            label: '不被定义的风',
+            desc: '陈仕雨',
+            imgSource: 'album_02.jpeg',
+          },
+          {
+            label: '如果我们从未来到',
+            desc: '秋原依',
+            imgSource: 'album_03.jpeg',
+          },
+          { label: '知道吗', desc: '孟颖', imgSource: 'album_04.jpeg' },
+          { label: '城南城北', desc: '苏蕾', imgSource: 'album_05.jpeg' },
+        ],
+      },
     }
   },
   mounted() {
@@ -153,29 +215,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.section-title {
-  font-size: 36px;
-  font-weight: 500;
-  font-style: italic;
-  margin-top: 40px;
-  color: #524f4c;
-}
-
-section {
-  position: relative;
-  padding-bottom: 40px;
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    width: 100%;
-    // border-top: 1px solid #ccc;
-    box-shadow: 0 1px 0 rgb(0 0 0 / 10%);
-  }
-}
-
 .section-1 {
   position: relative;
   width: 100vw;
@@ -211,33 +250,15 @@ section {
   }
 }
 
-.media-list {
-  overflow: hidden;
-  .media-item {
-    float: left;
-    width: 520px;
-    margin-bottom: 40px;
-    &:nth-child(odd) {
-      margin-right: 20px;
-    }
-  }
-}
-
-.song-list {
-  overflow: hidden;
-  .song-item {
-    float: left;
-    width: 157px;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-bottom: 40px;
-    text-align: center;
-    img {
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.4s ease-in;
-      &:hover {
-        transform: scale(1.1);
+.section-2 {
+  .media-list {
+    overflow: hidden;
+    .media-item {
+      float: left;
+      width: 520px;
+      margin-bottom: 40px;
+      &:nth-child(odd) {
+        margin-right: 20px;
       }
     }
   }
