@@ -1,71 +1,118 @@
-const music = {
-  title: '最新单曲',
+const n_m = {
+  title: '古风国风',
   buttonName: '点击了解更多...',
   buttonHref: '/service',
+  showMore: true,
   items: [
     {
-      imgSource:
-        'https://user-assets.sxlcdn.com/images/402037/FjEvX7sdh5odpQ0soLlQPRU-anNo.jpeg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/interlace/1/format/jpeg',
-      label: '浩瀚星海',
+      imgSource: 'jpeg (25).jpg',
+      label: '谪仙',
       authors: [
         {
-          name: '丁芙妮',
+          name: '伊格赛听',
+        },
+        {
+          name: '叶里',
         },
       ],
     },
     {
-      imgSource:
-        'https://user-assets.sxlcdn.com/images/869682/FlHsBvE_FTo8aknfrNtlVLQzrPgY.jpg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/quality/90!/interlace/1/format/jpeg',
-      label: '自娱自乐',
+      imgSource: 'jpeg (26).jpg',
+      label: '云与海',
       authors: [
         {
-          name: '金志文',
+          name: '阿YueYue',
         },
       ],
     },
     {
-      imgSource:
-        'https://user-assets.sxlcdn.com/images/402037/FkeNbQOKL9vQ_0RBPTxH70-qXpqR.jpeg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/interlace/1/format/jpeg',
-      label: '不如',
+      imgSource: 'jpeg (27).jpg',
+      label: '广寒谣',
       authors: [
         {
-          name: '秦海清',
+          name: '伊格赛听',
+        },
+        {
+          name: '不靠谱组合',
         },
       ],
     },
     {
-      imgSource:
-        'https://user-assets.sxlcdn.com/images/402037/Ftc9dJhx5xiRA6zdcV66jn26q-Af.jpeg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/interlace/1/format/jpeg',
-      label: '落日与晚风',
+      imgSource: 'jpeg (28).jpg',
+      label: '花与马',
       authors: [
-        {
-          name: 'IN-K',
-        },
-        {
-          name: '王忻辰',
-        },
-        {
-          name: '苏星婕',
-        },
-      ],
-    },
-    {
-      imgSource:
-        'https://user-assets.sxlcdn.com/images/869682/FkpUtouQkZ5IojeKnbo1dvoEG8EV.jpg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/quality/90!/interlace/1/format/jpeg',
-      label: '放空',
-      authors: [
-        {
-          name: 'A1 TRIP',
-        },
         {
           name: '大籽',
         },
+      ],
+    },
+    {
+      imgSource: 'jpeg (29).jpg',
+      label: '借月光',
+      authors: [
         {
-          name: 'Lil E',
+          name: '馒小蛮同学',
+        },
+      ],
+    },
+    {
+      imgSource: 'jpeg (30).jpg',
+      label: '关山酒',
+      authors: [
+        {
+          name: '等什么君',
+        },
+      ],
+    },
+    {
+      imgSource: 'jpeg (31).jpg',
+      label: '字正腔圆',
+      authors: [
+        {
+          name: '伦桑',
+        },
+        {
+          name: '一棵小葱张晓涵',
+        },
+      ],
+    },
+    {
+      imgSource: 'jpeg (32).jpg',
+      label: '惊雷',
+      authors: [
+        {
+          name: '皮卡丘多多',
+        },
+      ],
+    },
+    {
+      imgSource: 'jpeg (33).jpg',
+      label: '苏幕遮',
+      authors: [
+        {
+          name: '张晓棠',
+        },
+      ],
+    },
+    {
+      imgSource: 'jpeg (34).jpg',
+      label: '琉璃',
+      authors: [
+        {
+          name: '曲肖冰',
+        },
+      ],
+    },
+    {
+      imgSource: 'jpeg (35).jpg',
+      label: '江归江山归山',
+      authors: [
+        {
+          name: '倪浩毅',
         },
       ],
     },
   ],
 }
 
-export default music
+export default n_m

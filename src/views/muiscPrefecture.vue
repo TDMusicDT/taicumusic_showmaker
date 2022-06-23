@@ -3,6 +3,9 @@
     <com-swiper :img-list="bannerList" />
     <com-music :data="musicObject" />
     <com-music :data="top10" />
+    <com-music :data="singles" />
+    <com-music :data="ancientCustoms" />
+    <com-music :data="popSingles" />
   </section>
 </template>
 <script>
@@ -16,6 +19,9 @@ export default {
     return {
       musicObject: PARAMS.new_music,
       top10: PARAMS.top_10,
+      singles: PARAMS.pop_singles,
+      ancientCustoms: PARAMS.ancient_customs,
+      popSingles: PARAMS.pop_singles,
       bannerList: [
         'jpeg (1).jpg',
         'jpeg (2).jpg',

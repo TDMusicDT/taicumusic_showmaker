@@ -1,71 +1,76 @@
-const music = {
-  title: '最新单曲',
+const top = {
+  title: '个性说唱',
   buttonName: '点击了解更多...',
   buttonHref: '/service',
+  showMore: true,
   items: [
     {
-      imgSource:
-        'https://user-assets.sxlcdn.com/images/402037/FjEvX7sdh5odpQ0soLlQPRU-anNo.jpeg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/interlace/1/format/jpeg',
-      label: '浩瀚星海',
+      imgSource: 'jpeg (36).jpg',
+      label: '我根本不需要你在意',
       authors: [
         {
-          name: '丁芙妮',
-        },
-      ],
-    },
-    {
-      imgSource:
-        'https://user-assets.sxlcdn.com/images/869682/FlHsBvE_FTo8aknfrNtlVLQzrPgY.jpg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/quality/90!/interlace/1/format/jpeg',
-      label: '自娱自乐',
-      authors: [
-        {
-          name: '金志文',
-        },
-      ],
-    },
-    {
-      imgSource:
-        'https://user-assets.sxlcdn.com/images/402037/FkeNbQOKL9vQ_0RBPTxH70-qXpqR.jpeg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/interlace/1/format/jpeg',
-      label: '不如',
-      authors: [
-        {
-          name: '秦海清',
-        },
-      ],
-    },
-    {
-      imgSource:
-        'https://user-assets.sxlcdn.com/images/402037/Ftc9dJhx5xiRA6zdcV66jn26q-Af.jpeg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/interlace/1/format/jpeg',
-      label: '落日与晚风',
-      authors: [
-        {
-          name: 'IN-K',
-        },
-        {
-          name: '王忻辰',
-        },
-        {
-          name: '苏星婕',
-        },
-      ],
-    },
-    {
-      imgSource:
-        'https://user-assets.sxlcdn.com/images/869682/FkpUtouQkZ5IojeKnbo1dvoEG8EV.jpg?imageMogr2/strip/auto-orient/thumbnail/1200x9000%3E/quality/90!/interlace/1/format/jpeg',
-      label: '放空',
-      authors: [
-        {
-          name: 'A1 TRIP',
+          name: 'Y-D',
         },
         {
           name: '大籽',
         },
         {
-          name: 'Lil E',
+          name: 'A1 TRIP',
+        },
+      ],
+    },
+    {
+      imgSource: 'jpeg (37).jpg',
+      label: 'Butterfly',
+      authors: [
+        {
+          name: 'A1 TRIP',
+        },
+        {
+          name: 'Nick.Y',
+        },
+      ],
+    },
+    {
+      imgSource: 'jpeg (38).jpg',
+      label: '你说的都对',
+      authors: [
+        {
+          name: '朱星杰',
+        },
+        {
+          name: '大籽',
+        },
+      ],
+    },
+    {
+      imgSource: 'jpeg (39).jpg',
+      label: '小雨天气',
+      authors: [
+        {
+          name: 'yihuik苡慧',
+        },
+        {
+          name: '嘿人李逵Noisemakers',
+        },
+        {
+          name: '十七草',
+        },
+      ],
+    },
+    {
+      imgSource: 'jpeg (40).jpg',
+      label: '静悄悄 (Remix)',
+      authors: [
+        {
+          name: '曲肖冰',
+        },
+        {
+          name: '前男友',
         },
       ],
     },
   ],
 }
 
-export default music
+export default top

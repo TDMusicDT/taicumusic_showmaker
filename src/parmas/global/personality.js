@@ -2,6 +2,7 @@ const music = {
   title: '最新单曲',
   buttonName: '点击了解更多...',
   buttonHref: '/service',
+  showMore: true,
   items: [
     {
       imgSource:

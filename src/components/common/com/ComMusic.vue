@@ -125,6 +125,7 @@ export default {
           color: #524f4c;
         }
         &-authors {
+          font-size: 13px;
           font-weight: 500;
           margin-top: 6px;
         }

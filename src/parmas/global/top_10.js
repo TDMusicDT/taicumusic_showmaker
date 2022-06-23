@@ -2,6 +2,7 @@ const top = {
   title: 'TOP10好歌',
   buttonName: '点击了解更多...',
   buttonHref: '/service',
+  showMore: true,
   items: [
     {
       imgSource: 'jpeg (10).jpg',
