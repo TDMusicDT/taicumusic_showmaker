@@ -3,7 +3,7 @@ const top = {
   buttonName: '点击了解更多...',
   buttonHref: '/service',
   showMore: true,
-  showLine: false,
+  showLine: true,
   items: [
     {
       imgSource: 'jpeg (15).jpg',
