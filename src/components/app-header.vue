@@ -18,25 +18,25 @@
           >
         </li>
         <li class="menu-dropdown">
-          <a class="s-nav-item" target="_self" href="/7"
+          <a class="s-nav-item" target="_self" href="/service"
             ><span class="s-font-body">艺人服务</span></a
           >
         </li>
         <li class="menu-dropdown">
-          <a class="s-nav-item" target="_self" href="/3"
+          <a class="s-nav-item" target="_self" href="/publish"
             ><span class="s-font-body">音乐发行</span></a
           >
         </li>
         <li class="menu-dropdown">
-          <a class="s-nav-item selected" target="_self" href="/5"
+          <a class="s-nav-item selected" target="_self" href="/prefecture"
             ><span class="s-font-body">音乐专区</span></a
           >
         </li>
-        <li class="menu-dropdown">
+        <!-- <li class="menu-dropdown">
           <a class="s-nav-item" target="_self" href="/6"
             ><span class="s-font-body">关于我们</span></a
           >
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
