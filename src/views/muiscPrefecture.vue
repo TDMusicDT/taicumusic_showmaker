@@ -5,7 +5,7 @@
     <com-music :data="top10" />
     <com-music :data="singles" />
     <com-music :data="ancientCustoms" />
-    <com-music :data="popSingles" />
+    <com-music :data="personality" />
   </section>
 </template>
 <script>
@@ -17,11 +17,16 @@ export default {
   props: {},
   data() {
     return {
+      // 最新单曲
       musicObject: PARAMS.new_music,
+      // top10好歌
       top10: PARAMS.top_10,
+      // 流行单曲
       singles: PARAMS.pop_singles,
+      // 古风国风
       ancientCustoms: PARAMS.ancient_customs,
-      popSingles: PARAMS.pop_singles,
+      // 个性说唱
+      personality: PARAMS.personality,
       bannerList: [
         'jpeg (1).jpg',
         'jpeg (2).jpg',
