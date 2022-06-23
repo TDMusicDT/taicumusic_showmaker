@@ -9,7 +9,7 @@
       <template v-for="(item, index) in data.items">
         <div class="com-music__items_item" :key="index">
           <div class="item-img">
-            <img :src="item.imgSource" :alt="item.label" />
+            <img :src="cloudImageUrl + item.imgSource" :alt="item.label" />
           </div>
           <div class="item-title">
             <span>{{ item.label }}</span>
