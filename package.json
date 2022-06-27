@@ -1,11 +1,11 @@
 {
-  "name": "TaicuMusic",
+  "name": "chronomusic",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build2server": "vue-cli-service build && scp -r dist/* root@45.9.14.133:/data/taicumusic_showmaker/dist",
+    "build2server": "vue-cli-service build && scp -r dist/* root@45.9.14.133:/data/taicumusic_showmaker/dist2",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

@@ -15,6 +15,11 @@ const routes = [
         name: 'Home',
         component: () => import('@/views/home'),
       },
+      {
+        path: 'find',
+        name: 'Find',
+        component: () => import('@/views/find'),
+      },
       // 艺人服务
       {
         path: 'service',

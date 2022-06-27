@@ -3,15 +3,11 @@
     <div class="header-container">
       <div class="logo-container">
         <a href="/">
-          <img
-            src="https://taicumusic.ks3-cn-beijing.ksyuncs.com/imgs/taicudt_logo.jpeg"
-            class="logo-img"
-            data-description=""
-          />
+          <img src="@/assets/logo.png" class="logo-img" data-description="" />
         </a>
-        <div class="logo-text">
+        <!-- <div class="logo-text">
           <p><em>音乐无处不在</em></p>
-        </div>
+        </div> -->
       </div>
       <ul class="nav-container">
         <li
@@ -36,15 +32,12 @@ export default {
       currentPath: '/home',
       navs: [
         { label: '首页', path: '/home' },
-        { label: '艺人服务', path: '/service' },
-        { label: '音乐发行', path: '/publish' },
-        { label: '音乐专区', path: '/prefecture' },
+        { label: '发现', path: '/find' },
       ],
     }
   },
   created() {
     this.currentPath = this.$route.path
-    console.log(this.currentPath)
   },
   methods: {
     handleNavChange(nav) {

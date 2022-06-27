@@ -5,7 +5,7 @@
       <router-view />
     </main>
     <footer class="app-footer">
-      © 2020-2022 TaicuMusic Copyright 版权所有
+      © 2020-2022 Chronomusic Copyright 版权所有
     </footer>
   </div>
 </template>
