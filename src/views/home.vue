@@ -26,9 +26,6 @@
         </div>
       </section>
 
-      <!-- <section class="section-3">
-          <h2 class="section-title">Hikoon Music词曲库</h2>
-      </section> -->
       <section>
         <com-music :data="artistObject" />
         <!-- <h2 class="section-title">合作艺人</h2>

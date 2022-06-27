@@ -22,7 +22,7 @@
       <section>
         <h2 class="section-title">合作艺人/音乐人</h2>
         <p class="text-xl mt-2 mb-4">
-          <em>目前Hikoon Music已累计与500+名网络红人、歌手建立合作</em>
+          <em>目前TaicuMusic已累计与500+名网络红人、歌手建立合作</em>
         </p>
 
         <div class="enjoy-list">
@@ -85,7 +85,7 @@ export default {
         {
           title: '版权歌曲共享',
           icon: 'artist_enjoy_06.png',
-          desc: '依据歌手/艺人风格，可演唱hikoon体系内所有公司已发行歌曲，翻唱正版化',
+          desc: '依据歌手/艺人风格，可演唱taicumusic体系内所有公司已发行歌曲，翻唱正版化',
         },
       ],
       artistList: [

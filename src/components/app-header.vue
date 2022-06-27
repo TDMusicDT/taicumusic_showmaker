@@ -2,11 +2,13 @@
   <div class="header-wrapper">
     <div class="header-container">
       <div class="logo-container">
-        <img
-          src="https://taicumusic.ks3-cn-beijing.ksyuncs.com/imgs/taicudt_logo.jpeg"
-          class="logo-img"
-          data-description=""
-        />
+        <a href="/">
+          <img
+            src="https://taicumusic.ks3-cn-beijing.ksyuncs.com/imgs/taicudt_logo.jpeg"
+            class="logo-img"
+            data-description=""
+          />
+        </a>
         <div class="logo-text">
           <p><em>音乐无处不在</em></p>
         </div>
