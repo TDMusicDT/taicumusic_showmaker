@@ -43,14 +43,14 @@
     <section class="section bg-gray">
       <h2 class="section-title">海外热门</h2>
       <p class="section-subtitle">OVERSEAS HOT 在线播放 - 过去7天</p>
-      <div class="mb-16">
+      <!-- <div class="mb-16">
         <p class="font-bold">
           Beijing Drifting Melody Culture and Media Co. Ltd
         </p>
         <p class="font-bold text-2xl">
           Weekly Analytics Digest Jun 10 - Jun 16.
         </p>
-      </div>
+      </div> -->
       <div class="font-bold text-xl">单曲排行</div>
       <table class="table">
         <thead>
